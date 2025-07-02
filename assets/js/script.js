@@ -37,16 +37,39 @@ function renderProductos(filtro = "todos") {
     contenedor.innerHTML = '<p>No hay productos en esta categoría.</p>';
     return;
 }
-filtrados.forEach(producto => {
+filtrados.forEach((producto, idx) => {
     contenedor.innerHTML += `
     <article class="producto">
         <img src="${producto.imagen}" alt="${producto.nombre}" class="producto__img">
         <h3 class="producto__nombre">${producto.nombre}</h3>
         <p class="producto__desc">${producto.descripcion}</p>
-        <button class="producto__btn">Ver más</button>
+        <p class="producto__tallas"><strong>Tallas:</strong> S, M, L, XL</p>
+        <button class="producto__btn" onclick="mostrarFichaProducto(${idx})">Ver más</button>
     </article>
     `;
 });
+}
+
+// Ficha de producto (modal simple)
+function mostrarFichaProducto(idx) {
+    const producto = productos[idx];
+    const modal = document.createElement('div');
+    modal.className = 'modal-producto';
+    modal.innerHTML = `
+    <div class="modal-producto__contenido">
+        <span class="modal-producto__cerrar" tabindex="0">&times;</span>
+        <img src="${producto.imagen}" alt="${producto.nombre}" class="producto__img">
+        <h3 class="producto__nombre">${producto.nombre}</h3>
+        <p class="producto__desc">${producto.descripcion}</p>
+        <p class="producto__tallas"><strong>Tallas:</strong> S, M, L, XL</p>
+        <a href="https://wa.me/56947476286?text=Hola,%20quiero%20comprar%20el%20producto:%20${encodeURIComponent(producto.nombre)}" class="producto__btn producto__btn--whatsapp" target="_blank">Comprar por WhatsApp</a>
+    </div>
+    `;
+    document.body.appendChild(modal);
+    // Cerrar modal
+    modal.querySelector('.modal-producto__cerrar').onclick = () => modal.remove();
+    modal.querySelector('.modal-producto__cerrar').onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') modal.remove(); };
+    modal.onclick = (e) => { if(e.target === modal) modal.remove(); };
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -167,6 +167,49 @@ body {
     font-size: 0.95rem;
 }
 
+/* Modal ficha de producto */
+.modal-producto {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-producto__contenido {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    max-width: 350px;
+    width: 90vw;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.modal-producto__cerrar {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 2rem;
+    color: var(--color-principal);
+    cursor: pointer;
+    font-weight: bold;
+}
+.producto__tallas {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem 0;
+}
+.producto__btn--whatsapp {
+    background: #25d366;
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+}
+.producto__btn--whatsapp:hover {
+    background: #128c7e;
+}
+
 /* Responsive */
 @media (max-width: 800px) {
     .productos {
