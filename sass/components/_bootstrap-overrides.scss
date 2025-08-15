@@ -1,0 +1,35 @@
+// Overrides de Bootstrap 5 usando variables del proyecto
+
+// Botón primario acorde a la paleta
+.btn-primary {
+  background-color: $color-acento;
+  border-color: $color-acento;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: darken($color-acento, 6%);
+  border-color: darken($color-acento, 6%);
+}
+
+// Botón secundario con buen contraste de texto
+.btn-secondary {
+  background-color: $color-secundario;
+  border-color: $color-secundario;
+  color: $color-texto;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: darken($color-secundario, 5%);
+  border-color: darken($color-secundario, 5%);
+  color: $color-texto;
+}
+
+// Navbar clara con un fondo suavizado
+.navbar-light.bg-light {
+  background-color: lighten($color-secundario, 25%) !important;
+}
+
+// Cards: respetar nuestro estilo y sombras sutiles
+.card {
+  border-color: $color-card-border;
+}

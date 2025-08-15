@@ -1,0 +1,23 @@
+// Archivo principal SASS (7-1 pattern)
+@import 'abstracts/variables';
+@import 'abstracts/colors';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/bootstrap-overrides';
+@import 'components/cards';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/container';
+@import 'components/cards';
+@import 'components/back-to-top';
+@import 'components/badges';
+// Secciones Home
+@import 'pages/home';
+// Páginas
+@import 'pages/catalog';
+@import 'pages/contact';
+@import 'pages/product';
+// Puedes agregar más imports según crezca el proyecto

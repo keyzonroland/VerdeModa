@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - VerdeModa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container-fluid py-3">
+    <div class="vm-container my-2">
+  <vm-navbar></vm-navbar>
+
+      <main>
+        <vm-hero title="Catálogo" desc="Prendas atemporales tejidas a mano con materiales reciclados." cta-text="Ver productos" cta-href="#catalogo" variant="default"></vm-hero>
+
+  <section class="catalogo" id="catalogo">
+          <div class="catalogo__filtros mb-3 d-flex gap-2 flex-wrap">
+            <button class="btn btn-secondary" data-categoria="todos">Todos</button>
+            <button class="btn btn-primary" data-categoria="vestuario">Prendas</button>
+            <button class="btn btn-primary" data-categoria="accesorios">Accesorios</button>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+          <span class="badge badge--nuevo">Nuevo</span>
+          <picture>
+            <source type="image/webp" srcset="img/dist/KCSB-400.webp 400w, img/dist/KCSB-800.webp 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <source type="image/jpeg" srcset="img/dist/KCSB-400.jpg 400w, img/dist/KCSB-800.jpg 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <img class="card__img" src="img/KCSB.jpeg" alt="Keep Calm Shoes Baby" loading="lazy" decoding="async" width="400" height="400">
+          </picture>
+          <h4 class="card__titulo">Producto 1</h4>
+          <p class="card__desc">Pantuflas bebé.</p>
+          <div class="card__price">$19.990</div>
+                <a class="btn btn-primary w-100" href="#">Ver</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+          <span class="badge badge--eco">Eco</span>
+          <picture>
+            <source type="image/webp" srcset="img/dist/KCSM-400.webp 400w, img/dist/KCSM-800.webp 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <source type="image/jpeg" srcset="img/dist/KCSM-400.jpg 400w, img/dist/KCSM-800.jpg 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <img class="card__img" src="img/KCSM.jpeg" alt="Keep Calm Shoes Mini" loading="lazy" decoding="async" width="400" height="400">
+          </picture>
+          <h4 class="card__titulo">Producto 2</h4>
+          <p class="card__desc">Pantuflas mini.</p>
+          <div class="card__price">$24.990</div>
+                <a class="btn btn-primary w-100" href="#">Ver</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+          <span class="badge badge--oferta">Oferta</span>
+          <picture>
+            <source type="image/webp" srcset="img/dist/KCSA-400.webp 400w, img/dist/KCSA-800.webp 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <source type="image/jpeg" srcset="img/dist/KCSA-400.jpg 400w, img/dist/KCSA-800.jpg 800w" sizes="(max-width: 576px) 100vw, 400px">
+            <img class="card__img" src="img/KCSA.jpeg" alt="Keep Calm Shoes Adulto" loading="lazy" decoding="async" width="400" height="400">
+          </picture>
+          <h4 class="card__titulo">Producto 3</h4>
+          <p class="card__desc">Pantuflas adulto.</p>
+          <div class="card__price">$29.990</div>
+                <a class="btn btn-primary w-100" href="#">Ver</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+                <picture>
+                  <source type="image/webp" srcset="img/dist/ACCA-400.webp 400w, img/dist/ACCA-800.webp 800w" sizes="(max-width: 576px) 100vw, 400px">
+                  <source type="image/jpeg" srcset="img/dist/ACCA-400.jpg 400w, img/dist/ACCA-800.jpg 800w" sizes="(max-width: 576px) 100vw, 400px">
+                  <img class="card__img" src="img/ACCA.jpeg" alt="Producto 4" width="400" height="400" loading="lazy" decoding="async">
+                </picture>
+          <h4 class="card__titulo">Producto 4</h4>
+          <p class="card__desc">Accesorio artesanal.</p>
+          <div class="card__price">$34.990</div>
+                <a class="btn btn-primary w-100" href="#">Ver</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="back-to-top" aria-label="Volver arriba" title="Volver arriba">↑</button>
+      </main>
+
+  <vm-footer></vm-footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

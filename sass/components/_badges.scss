@@ -1,0 +1,12 @@
+// Badges para estados de producto
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: .8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+.badge--nuevo { background: #eaffea; color: $color-principal; border-color: $color-principal; }
+.badge--eco { background: #f2fff2; color: $color-acento; border-color: $color-acento; }
+.badge--oferta { background: #fff6e6; color: #b25900; border-color: #ffb65a; }

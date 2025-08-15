@@ -1,0 +1,92 @@
+// Secciones de la Home
+
+.hero {
+  position: relative;
+  border-radius: 12px;
+  padding: 56px 24px;
+  text-align: center;
+  margin-bottom: $space-6;
+  overflow: hidden;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(58,90,64,0.5), rgba(163,177,138,0.35)), var(--hero-bg, none);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+}
+.hero--bg-default { --hero-bg: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'); }
+.hero--catalog { --hero-bg: url('https://images.unsplash.com/photo-1520975922313-5a810fda9664?q=80&w=1200&auto=format&fit=crop'); }
+.hero--contact { --hero-bg: url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1200&auto=format&fit=crop'); }
+.hero__content { position: relative; z-index: 1; color: #fff; max-width: 900px; }
+.hero__slogan {
+  font-size: 2.2rem;
+  color: #fff;
+}
+.hero__desc {
+  max-width: 800px;
+  margin: 8px auto 16px;
+  color: #f4f7f4;
+}
+.hero .btn {
+  margin-top: 8px;
+}
+
+.info {
+  background: #fff;
+  border: 1px solid $color-card-border;
+  border-radius: 12px;
+  padding: $space-6;
+  text-align: center;
+  margin: $space-6 0;
+}
+.info__titulo { font-size: 1.6rem; }
+.info__desc { max-width: 900px; margin: 8px auto 0; }
+
+.destacados { margin: $space-7 0 $space-6; }
+.destacados__titulo {
+  text-align: center;
+  margin-bottom: $space-6;
+}
+.destacados__productos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: $space-5; align-items: stretch; }
+
+.testimonios {
+  background: #fff;
+  border: 1px solid $color-card-border;
+  border-radius: 12px;
+  padding: $space-6;
+  margin: $space-6 0;
+}
+.testimonios__titulo { text-align: center; margin-bottom: 12px; }
+.testimonios__lista { display: grid; gap: 12px; }
+.testimonio {
+  font-style: italic;
+  color: $color-texto;
+  border-left: 4px solid $color-acento;
+  padding-left: 12px;
+}
+.testimonio__autor { display: block; margin-top: 6px; font-weight: 600; }
+
+.suscripcion {
+  background: linear-gradient(135deg, rgba(58,90,64,0.08), rgba(163,177,138,0.12));
+  border-radius: 12px;
+  padding: $space-6;
+  text-align: center;
+}
+.suscripcion__form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.suscripcion__input {
+  padding: 10px 14px;
+  border: 1px solid $color-card-border;
+  border-radius: 8px;
+  min-width: 240px;
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 260px; padding: 32px 16px; }
+  .hero__slogan { font-size: 1.6rem; }
+}

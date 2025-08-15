@@ -1,0 +1,41 @@
+// Footer
+.footer {
+  min-height: 100px;
+  background: $color-footer;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer__link:hover {
+  color: $color-acento;
+}
+.footer__info {
+  margin-bottom: 0.5rem;
+}
+.footer__redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer__link:hover {
+  color: $color-acento;
+}

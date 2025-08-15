@@ -1,0 +1,16 @@
+// Ficha de producto
+.producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.producto__media { display: flex; justify-content: center; align-items: center; }
+.producto__img { width: 100%; max-width: 520px; border-radius: 12px; border: 1px solid $color-card-border; }
+.producto__nombre { font-size: 1.8rem; }
+.producto__precio { font-size: 1.4rem; font-weight: 700; color: $color-principal; margin: 8px 0; }
+.producto__tallas { display: flex; gap: 8px; margin: 12px 0; }
+.producto__cta { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .producto { grid-template-columns: 1fr; }
+}

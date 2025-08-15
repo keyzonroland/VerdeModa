@@ -1,0 +1,33 @@
+// Guía de estilos VerdeModa
+
+.color-principal { background: $color-principal; color: #fff; }
+.color-secundario { background: $color-secundario; color: $color-texto; }
+.color-acento { background: $color-acento; color: $color-texto; }
+.color-fondo { background: $color-fondo; color: $color-texto; }
+
+.font-principal { font-family: $fuente-principal; }
+
+.size-titulo { font-size: 2rem; }
+.size-subtitulo { font-size: 1.2rem; }
+.size-texto { font-size: 1rem; }
+
+.btn {
+  background: $color-acento;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn--secundario {
+  background: $color-principal;
+}
+.card {
+  background: #fff;
+  border: 1px solid $color-secundario;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(56,142,60,0.08);
+}

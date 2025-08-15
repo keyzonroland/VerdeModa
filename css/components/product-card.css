@@ -1,0 +1,42 @@
+/* BEM: Card de producto VerdeModa */
+.product-card {
+  background: #fff;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(56,142,60,0.08);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.product-card__nombre {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.product-card__desc {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.product-card__tallas {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.product-card__btn {
+  background: var(--color-acento, #ffb300);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}

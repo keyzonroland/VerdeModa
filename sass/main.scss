@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'mixins';
+@import 'style-guide';
+@import 'components/header';
+@import 'components/product-card';
+
+body {
+  font-family: $fuente-principal;
+  background: $color-fondo;
+  color: $color-texto;
+  margin: 0;
+}

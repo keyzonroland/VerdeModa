@@ -1,0 +1,69 @@
+// Header limpio y consistente
+.header {
+  width: 100%;
+  background: $color-principal;
+  color: #fff;
+  padding: 18px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.header.is-scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.header__logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.header__item a:hover {
+  background: $color-acento;
+}
+
+.header__item--activo a {
+  color: $color-secundario;
+}
+
+// Menú móvil
+.header__toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .header { padding: 12px 16px; }
+  .header__toggle { display: inline-grid; place-items: center; }
+  .header__nav { display: none; position: absolute; left: 0; right: 0; top: 60px; background: $color-principal; padding: 12px 16px; }
+  .header__nav.is-open { display: block; }
+  .header__menu { flex-direction: column; gap: 8px; }
+}
