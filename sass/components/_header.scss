@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 // BEM: Header VerdeModa
 .header {
   background: $color-principal;

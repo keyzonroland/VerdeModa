@@ -1,9 +1,11 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as bs;
+
 // Utilidades de espaciado ligeras
-.u-mb-sm { margin-bottom: $spacer * .5 !important; }
-.u-mb { margin-bottom: $spacer !important; }
-.u-pt { padding-top: $spacer !important; }
+.u-mb-sm { margin-bottom: bs.$spacer * .5 !important; }
+.u-mb { margin-bottom: bs.$spacer !important; }
+.u-pt { padding-top: bs.$spacer !important; }
 
 // Helpers responsive
 @media (min-width: 768px) {
-  .u-mb-md { margin-bottom: $spacer * 1.5 !important; }
+  .u-mb-md { margin-bottom: bs.$spacer * 1.5 !important; }
 }

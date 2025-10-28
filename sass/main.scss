@@ -1,38 +1,36 @@
-// Variables y configuración de Bootstrap
-@import "abstracts/bootstrap-variables";
+// Abstracts & Variables first
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/functions" as *;
 
-// Bootstrap core
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Bootstrap configuration
+@use "abstracts/bootstrap-variables" as *;
+@use "../node_modules/bootstrap/scss/bootstrap" as bs;
 
 // Custom variables
 $transition-base: all .2s ease-in-out;
-$box-shadow-hover: 0 .5rem 1rem rgba($dark, .15);
-
-// Abstracts
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "abstracts/functions";
+$box-shadow-hover: 0 .5rem 1rem rgba($tds-dark, .15);
 
 // Base
-@import "base/reset";
-@import "base/typography";
+@use "base/reset" as *;
+@use "base/typography" as *;
 
 // Components
-@import "components/buttons";
-@import "components/cards";
-@import "components/header";
-@import "components/product-card";
-@import "components/forms";
+@use "components/buttons" as *;
+@use "components/cards" as *;
+@use "components/header" as *;
+@use "components/product-card" as *;
+@use "components/forms" as *;
 
 // Layout
-@import "layout/container";
-@import "layout/grid";
+@use "layout/container" as *;
+@use "layout/grid" as *;
 
 // Pages
-@import "pages/home";
-@import "pages/catalog";
-@import "pages/contact";
+@use "pages/home" as *;
+@use "pages/catalog" as *;
+@use "pages/contact" as *;
 
 // Utilities
-@import "utilities/spacing";
-@import "utilities/text";
+@use "utilities/spacing" as *;
+@use "utilities/text" as *;

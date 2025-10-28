@@ -1,16 +1,18 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as bs;
+
 // Estilos para formularios, usando clases BEM mínimas y aprovechando Bootstrap
 .form {
   &-control {
-    border-radius: $border-radius;
+    border-radius: bs.$border-radius;
   }
 
   &-label {
     font-weight: 600;
-    color: $dark;
+    color: bs.$gray-900;
   }
 
   .form-error {
-    color: $danger;
+    color: bs.$danger;
     font-size: 0.875rem;
   }
 }

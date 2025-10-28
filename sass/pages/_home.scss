@@ -1,40 +1,62 @@
+@use "../abstracts/variables" as *;
+
 // Secciones de la Home
 
 .hero {
   position: relative;
   border-radius: 12px;
-  padding: 56px 24px;
+  padding: 80px 24px;
   text-align: center;
   margin-bottom: $space-6;
   overflow: hidden;
   min-height: 320px;
-  display: grid;
-  place-items: center;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(58,90,64,0.5), rgba(163,177,138,0.35)), var(--hero-bg, none);
-  background-size: cover;
-  background-position: center;
-  filter: saturate(1.05);
-}
-.hero--bg-default { --hero-bg: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'); }
-.hero--catalog { --hero-bg: url('https://images.unsplash.com/photo-1520975922313-5a810fda9664?q=80&w=1200&auto=format&fit=crop'); }
-.hero--contact { --hero-bg: url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1200&auto=format&fit=crop'); }
-.hero__content { position: relative; z-index: 1; color: #fff; max-width: 900px; }
-.hero__slogan {
-  font-size: 2.2rem;
-  color: #fff;
-}
-.hero__desc {
-  max-width: 800px;
-  margin: 8px auto 16px;
-  color: #f4f7f4;
-}
-.hero .btn {
-  margin-top: 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(58,90,64,0.5), rgba(163,177,138,0.35)), var(--hero-bg, none);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(1.05);
+    z-index: 1;
+  }
+
+  &--bg-default { --hero-bg: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop'); }
+  &--catalog { --hero-bg: url('https://images.unsplash.com/photo-1520975922313-5a810fda9664?q=80&w=1200&auto=format&fit=crop'); }
+  &--contact { --hero-bg: url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1200&auto=format&fit=crop'); }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero__slogan {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+
+  .hero__desc {
+    max-width: 800px;
+    margin: 8px auto 16px;
+    color: #f4f7f4;
+  }
+
+  .btn {
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  }
 }
 
 .info {

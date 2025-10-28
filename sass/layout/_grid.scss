@@ -1,20 +1,40 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as bs;
+
 // Contenedores principales
 .tds-container {
-  @extend .container;
+  // Heredamos los estilos de Bootstrap
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) { max-width: 540px; }
+  @media (min-width: 768px) { max-width: 720px; }
+  @media (min-width: 992px) { max-width: 960px; }
+  @media (min-width: 1200px) { max-width: 1140px; }
+  @media (min-width: 1400px) { max-width: 1320px; }
   
   &--fluid {
-    @extend .container-fluid;
+    max-width: 100%;
   }
   
   &--narrow {
-    @extend .container;
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
     max-width: 960px;
   }
 }
 
 // Grid personalizado
 .tds-row {
-  @extend .row;
+  // Heredamos los estilos de Bootstrap
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
   
   &--tight {
     margin-left: -0.5rem;
