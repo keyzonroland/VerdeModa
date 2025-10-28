@@ -1,0 +1,28 @@
+// Contenedores principales
+.tds-container {
+  @extend .container;
+  
+  &--fluid {
+    @extend .container-fluid;
+  }
+  
+  &--narrow {
+    @extend .container;
+    max-width: 960px;
+  }
+}
+
+// Grid personalizado
+.tds-row {
+  @extend .row;
+  
+  &--tight {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    
+    > [class*="col-"] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

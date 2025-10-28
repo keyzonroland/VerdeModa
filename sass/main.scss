@@ -1,12 +1,38 @@
-@import 'variables';
-@import 'mixins';
-@import 'style-guide';
-@import 'components/header';
-@import 'components/product-card';
+// Variables y configuración de Bootstrap
+@import "abstracts/bootstrap-variables";
 
-body {
-  font-family: $fuente-principal;
-  background: $color-fondo;
-  color: $color-texto;
-  margin: 0;
-}
+// Bootstrap core
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom variables
+$transition-base: all .2s ease-in-out;
+$box-shadow-hover: 0 .5rem 1rem rgba($dark, .15);
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+
+// Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/header";
+@import "components/product-card";
+@import "components/forms";
+
+// Layout
+@import "layout/container";
+@import "layout/grid";
+
+// Pages
+@import "pages/home";
+@import "pages/catalog";
+@import "pages/contact";
+
+// Utilities
+@import "utilities/spacing";
+@import "utilities/text";

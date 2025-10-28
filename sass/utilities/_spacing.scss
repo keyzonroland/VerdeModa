@@ -1,0 +1,9 @@
+// Utilidades de espaciado ligeras
+.u-mb-sm { margin-bottom: $spacer * .5 !important; }
+.u-mb { margin-bottom: $spacer !important; }
+.u-pt { padding-top: $spacer !important; }
+
+// Helpers responsive
+@media (min-width: 768px) {
+  .u-mb-md { margin-bottom: $spacer * 1.5 !important; }
+}

@@ -1,0 +1,21 @@
+// Estilos para formularios, usando clases BEM mínimas y aprovechando Bootstrap
+.form {
+  &-control {
+    border-radius: $border-radius;
+  }
+
+  &-label {
+    font-weight: 600;
+    color: $dark;
+  }
+
+  .form-error {
+    color: $danger;
+    font-size: 0.875rem;
+  }
+}
+
+// Ajustes visuales para card forms
+.card .form-label {
+  font-weight: 600;
+}

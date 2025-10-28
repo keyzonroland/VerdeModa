@@ -1,0 +1,16 @@
+.productos__filtros {
+  .btn {
+    transition: all 0.2s ease-in-out;
+    
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+    
+    i {
+      font-size: 1.1rem;
+      vertical-align: -0.125em;
+    }
+  }
+}
